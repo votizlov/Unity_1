@@ -9,11 +9,13 @@
         <e p="Scripts" t="Include">
           <e p="Action.cs" t="Include" />
           <e p="ConditionClick.cs" t="Include" />
-          <e p="CreateObjectAction.cs" t="Include" />
-          <e p="CubeControl.cs" t="Include" />
           <e p="DestroyAction.cs" t="Include" />
           <e p="Enums.cs" t="Include" />
+          <e p="LifeSystem.cs" t="Include" />
+          <e p="MainMenu.cs" t="Include" />
           <e p="ObjectCreatorArea.cs" t="Include" />
+          <e p="ObjectScale.cs" t="Include" />
+          <e p="ScoreController.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">

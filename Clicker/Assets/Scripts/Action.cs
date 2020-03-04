@@ -4,5 +4,5 @@ using UnityEngine;
 
 public abstract class Action : MonoBehaviour
 {
-    public abstract bool ExecuteAction(GameObject gameObject);
+    public abstract bool ExecuteAction(GameObject otherObject);
 }
