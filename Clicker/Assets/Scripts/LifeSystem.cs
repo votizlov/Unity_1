@@ -1,5 +1,4 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 
 public class LifeSystem : Action
 {
@@ -46,8 +45,6 @@ public class LifeSystem : Action
             {
                 variable.ExecuteAction(null);
             }
-
-            Destroy(gameObject);
         }
 
         return true;

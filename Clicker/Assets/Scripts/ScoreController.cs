@@ -19,6 +19,12 @@ public class ScoreController : Action
     public override bool ExecuteAction(GameObject otherObject)
     {
         _score.text = (++_n).ToString();
+        if (_n > PlayerPrefs.GetInt("Highscore"))
+        {
+            PlayerPrefs.SetInt("Highscore", _n);
+            PlayerPrefs.Save();
+        }
+
         return true;
     }
 }
