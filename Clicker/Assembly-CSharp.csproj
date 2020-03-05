@@ -59,13 +59,16 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Action.cs" />
+     <Compile Include="Assets\Scripts\Condition.cs" />
      <Compile Include="Assets\Scripts\ConditionClick.cs" />
      <Compile Include="Assets\Scripts\DestroyAction.cs" />
      <Compile Include="Assets\Scripts\Enums.cs" />
+     <Compile Include="Assets\Scripts\HitAction.cs" />
      <Compile Include="Assets\Scripts\LifeSystem.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\ObjectCreatorArea.cs" />
      <Compile Include="Assets\Scripts\ObjectScale.cs" />
+     <Compile Include="Assets\Scripts\PointsSpawn.cs" />
      <Compile Include="Assets\Scripts\ScoreController.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />

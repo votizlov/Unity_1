@@ -14,7 +14,6 @@ public class DestroyAction : Action
 	//OtherObject is null when this Action is called from a Condition that is not collision-based
 	public override bool ExecuteAction(GameObject otherObject)
 	{
-		Debug.Log("destroyed");
 		if(deathEffect != null)
 		{
 			GameObject newObject = Instantiate<GameObject>(deathEffect);

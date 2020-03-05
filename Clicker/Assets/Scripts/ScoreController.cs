@@ -1,18 +1,24 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
+using UnityEngine.UI;
 
-public class Scorecontroller : MonoBehaviour
+public class ScoreController : Action
 {
-    // Start is called before the first frame update
-    void Start()
+    private TMP_Text _score;
+    private int _n = 0;
+
+    private void Start()
     {
-        
+        _score = GetComponent<TMP_Text>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public override bool ExecuteAction(GameObject otherObject)
     {
-        
+        _score.text = (++_n).ToString();
+        return true;
     }
 }
