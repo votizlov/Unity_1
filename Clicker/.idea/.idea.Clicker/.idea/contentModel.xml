@@ -11,6 +11,7 @@
           <e p="Condition.cs" t="Include" />
           <e p="ConditionClick.cs" t="Include" />
           <e p="DestroyAction.cs" t="Include" />
+          <e p="DestroyOnFall.cs" t="Include" />
           <e p="Enums.cs" t="Include" />
           <e p="HitAction.cs" t="Include" />
           <e p="LifeSystem.cs" t="Include" />

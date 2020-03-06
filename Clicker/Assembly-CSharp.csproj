@@ -62,6 +62,7 @@
      <Compile Include="Assets\Scripts\Condition.cs" />
      <Compile Include="Assets\Scripts\ConditionClick.cs" />
      <Compile Include="Assets\Scripts\DestroyAction.cs" />
+     <Compile Include="Assets\Scripts\DestroyOnFall.cs" />
      <Compile Include="Assets\Scripts\Enums.cs" />
      <Compile Include="Assets\Scripts\HitAction.cs" />
      <Compile Include="Assets\Scripts\LifeSystem.cs" />
