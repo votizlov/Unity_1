@@ -11,6 +11,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScoreController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Condition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Timer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnableAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Action.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DestroyOnFall.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LifeSystem.cs" root0="FORCE_HIGHLIGHTING" />
@@ -28,19 +30,22 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/CubeControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Action.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enums.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ObjectCreatorArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DestroyForPointsAttribute.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Condition.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DestroyAction.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ScoreController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PointsSpawn.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HitAction.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/LifeSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ConditionClick.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ObjectScale.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DeleteOnExit.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DestroyOnFall.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ObjectCreatorArea.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BlockInputAction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnableAction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ConditionClick.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Timer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScoreController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LifeSystem.cs" />
       </list>
     </option>
   </component>
@@ -83,6 +88,7 @@
       <workItem from="1583392777089" duration="12896000" />
       <workItem from="1583442456555" duration="1336000" />
       <workItem from="1583473175822" duration="428000" />
+      <workItem from="1583681535345" duration="4896000" />
     </task>
     <servers />
   </component>

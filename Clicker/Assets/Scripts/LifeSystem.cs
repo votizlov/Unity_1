@@ -11,12 +11,9 @@ public class LifeSystem : Action
     [Header("Actions on death")] [SerializeField]
     private Action[] actionsOnDeath;
 
-    private Color _color;
-
     private void Start()
     {
-        _color = GetComponent<Renderer>().material.color;
-        GameObject score = GameObject.Find("Score");
+        GameObject score = GameObject.Find("CurrentScore");
         actionsOnDeath = new Action[]
         {
             GetComponent<DestroyAction>(),
@@ -32,7 +29,6 @@ public class LifeSystem : Action
     public override bool ExecuteAction(GameObject otherObject)
     {
         life--;
-        _color = new Color(_color.r + 10, _color.g, _color.b);
 
         foreach (var variable in actionsOnHit)
         {

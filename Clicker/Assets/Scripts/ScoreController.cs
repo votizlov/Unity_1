@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
-using UnityEngine.UI;
 
 public class ScoreController : Action
 {
     private TMP_Text _score;
-    private int _n = 0;
+    private int _n;
 
     private void Start()
     {

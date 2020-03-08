@@ -63,6 +63,7 @@
      <Compile Include="Assets\Scripts\ConditionClick.cs" />
      <Compile Include="Assets\Scripts\DestroyAction.cs" />
      <Compile Include="Assets\Scripts\DestroyOnFall.cs" />
+     <Compile Include="Assets\Scripts\EnableAction.cs" />
      <Compile Include="Assets\Scripts\Enums.cs" />
      <Compile Include="Assets\Scripts\HitAction.cs" />
      <Compile Include="Assets\Scripts\LifeSystem.cs" />
@@ -71,6 +72,7 @@
      <Compile Include="Assets\Scripts\ObjectScale.cs" />
      <Compile Include="Assets\Scripts\PointsSpawn.cs" />
      <Compile Include="Assets\Scripts\ScoreController.cs" />
+     <Compile Include="Assets\Scripts\Timer.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />

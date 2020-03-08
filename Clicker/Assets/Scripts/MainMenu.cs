@@ -9,6 +9,11 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Game");
     }
 
+    public void Menu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
     private void Start()
     {
         GameObject.Find("Score").GetComponent<TMP_Text>().text = PlayerPrefs.GetInt("Highscore").ToString();
