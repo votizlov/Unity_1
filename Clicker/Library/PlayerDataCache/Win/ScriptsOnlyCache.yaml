@@ -615,7 +615,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMesh
   - hash:
       serializedVersion: 2
-      Hash: 1295fd410ab0fbb163358c94578b3009
+      Hash: 2b2111ae916fdced6ed887a3dc7d2fc4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ObjectScale

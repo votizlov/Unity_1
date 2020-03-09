@@ -35,7 +35,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/DestroyAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PointsSpawn.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HitAction.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ObjectScale.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DeleteOnExit.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DestroyOnFall.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ObjectCreatorArea.cs" />
@@ -46,6 +45,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Timer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScoreController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LifeSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ObjectScale.cs" />
       </list>
     </option>
   </component>
@@ -89,6 +89,7 @@
       <workItem from="1583442456555" duration="1336000" />
       <workItem from="1583473175822" duration="428000" />
       <workItem from="1583681535345" duration="4896000" />
+      <workItem from="1583772559823" duration="345000" />
     </task>
     <servers />
   </component>
