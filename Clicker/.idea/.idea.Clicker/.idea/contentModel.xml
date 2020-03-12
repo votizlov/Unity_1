@@ -7,21 +7,21 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
-          <e p="Action.cs" t="Include" />
-          <e p="Condition.cs" t="Include" />
-          <e p="ConditionClick.cs" t="Include" />
-          <e p="DestroyAction.cs" t="Include" />
-          <e p="DestroyOnFall.cs" t="Include" />
-          <e p="EnableAction.cs" t="Include" />
-          <e p="Enums.cs" t="Include" />
-          <e p="HitAction.cs" t="Include" />
-          <e p="LifeSystem.cs" t="Include" />
-          <e p="MainMenu.cs" t="Include" />
-          <e p="ObjectCreatorArea.cs" t="Include" />
-          <e p="ObjectScale.cs" t="Include" />
-          <e p="PointsSpawn.cs" t="Include" />
-          <e p="ScoreController.cs" t="Include" />
-          <e p="Timer.cs" t="Include" />
+          <e p="Core" t="Include">
+            <e p="EndgameController.cs" t="Include" />
+            <e p="Game.cs" t="Include" />
+            <e p="GamemenuController.cs" t="Include" />
+            <e p="GameplayHUD.cs" t="Include" />
+            <e p="GameProxy.cs" t="Include" />
+            <e p="MainmenuController.cs" t="Include" />
+            <e p="Timer.cs" t="Include" />
+          </e>
+          <e p="Objects" t="Include">
+            <e p="Effect.cs" t="Include" />
+            <e p="Enemy.cs" t="Include" />
+            <e p="ObjectCreatorArea.cs" t="Include" />
+            <e p="Spawner.cs" t="Include" />
+          </e>
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">

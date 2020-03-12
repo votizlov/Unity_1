@@ -12,11 +12,7 @@ GameObject:
   - component: {fileID: 146158568139791363}
   - component: {fileID: 146158568139791362}
   - component: {fileID: 146158568139791361}
-  - component: {fileID: 146158568139791360}
-  - component: {fileID: 146158568139791367}
-  - component: {fileID: 146158568139791366}
-  - component: {fileID: 146158568139791365}
-  - component: {fileID: 4894225698086202679}
+  - component: {fileID: 156605448053179497}
   m_Layer: 0
   m_Name: Baloon
   m_TagString: Baloon
@@ -135,7 +131,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.28, y: 1.28}
   m_EdgeRadius: 0
---- !u!114 &146158568139791360
+--- !u!114 &156605448053179497
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,65 +140,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 146158568139791364}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ec9525856804474fa52f86a3c8898e6, type: 3}
+  m_Script: {fileID: 11500000, guid: 55e5a208dc8ad49899bfd68ca75474f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actions:
-  - {fileID: 146158568139791367}
-  filterTag: 
---- !u!114 &146158568139791367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 146158568139791364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55626e5d611114c48b57612464e84066, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  life: 1
-  actionsOnHit: []
-  actionsOnDeath:
-  - {fileID: 0}
-  - {fileID: 0}
---- !u!114 &146158568139791366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 146158568139791364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86254213c004d0c46ba10f34cce8c329, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: 0
-  deathEffect: {fileID: 0}
---- !u!114 &146158568139791365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 146158568139791364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c8fd20f4df9f9241b56afeef3c89546, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  score: 10
+  clicksToDestroy: 1
+  gameProxy: {fileID: 11400000, guid: 0278d0f6229f59a43870cea526061f62, type: 2}
   k: 1.001
---- !u!114 &4894225698086202679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 146158568139791364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67306b6684f8d0e48928308154c6060f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  kDestroy: 2
