@@ -19,7 +19,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/GameplayHUD.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/MainMenuController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/EndgameController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Objects/Spawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/GameProxy.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -46,17 +45,18 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameProxy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/EndgameController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Game.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/ObjectCreatorArea.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Timer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/GamemenuController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/GameMenuController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/MainmenuController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/MainMenuController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/GameProxy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Spawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/GameMenuController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/GameplayHUD.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/GameProxy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Timer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/ObjectCreatorArea.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/EndgameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Game.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/MainMenuController.cs" />
       </list>
     </option>
   </component>
@@ -103,6 +103,8 @@
       <workItem from="1583772559823" duration="345000" />
       <workItem from="1583858106821" duration="8340000" />
       <workItem from="1584011204657" duration="6103000" />
+      <workItem from="1584020105198" duration="280000" />
+      <workItem from="1584083617574" duration="1080000" />
     </task>
     <servers />
   </component>

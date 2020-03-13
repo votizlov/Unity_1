@@ -1,60 +1,58 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Globalization;
-using Core;
+﻿using System.Globalization;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
-using UnityEngine.UI;
 
-public class GameplayHUD : MonoBehaviour
+namespace Core
 {
-    public GameProxy GameProxy;
-    public TMP_Text ScoreText;
-    public TMP_Text TimerText;
-    public GameObject endButton;
-
-    private void Awake()
+    public class GameplayHUD : MonoBehaviour
     {
-        GameProxy.NewGameEvent += OnNewGame;
-        GameProxy.AddScoreEvent += OnScoreAdded;
-        GameProxy.EndGameEvent += OnEndGame;
-        GameProxy.TimerEndEvent += TimerEndEvent;
-        GameProxy.TimerTickEvent += TimerTickEvent;
-    }
+        public GameProxy gameProxy;
+        public TMP_Text scoreText;
+        public TMP_Text timerText;
+        public GameObject endButton;
 
-    private void OnDestroy()
-    {
-        GameProxy.NewGameEvent -= OnNewGame;
-        GameProxy.AddScoreEvent -= OnScoreAdded;
-        GameProxy.EndGameEvent -= OnEndGame;
-        GameProxy.TimerTickEvent -= TimerTickEvent;
-        GameProxy.TimerEndEvent += TimerEndEvent;
-    }
+        private void Awake()
+        {
+            gameProxy.NewGameEvent += OnNewGame;
+            gameProxy.AddScoreEvent += OnScoreAdded;
+            gameProxy.EndGameEvent += OnEndGame;
+            gameProxy.TimerEndEvent += TimerEndEvent;
+            gameProxy.TimerTickEvent += TimerTickEvent;
+        }
 
-    private void OnEndGame()
-    {
-        endButton.SetActive(true);
-    }
+        private void OnDestroy()
+        {
+            gameProxy.NewGameEvent -= OnNewGame;
+            gameProxy.AddScoreEvent -= OnScoreAdded;
+            gameProxy.EndGameEvent -= OnEndGame;
+            gameProxy.TimerTickEvent -= TimerTickEvent;
+            gameProxy.TimerEndEvent += TimerEndEvent;
+        }
 
-    private void OnScoreAdded(int delta)
-    {
-        ScoreText.text = GameProxy.Scores.ToString();
-    }
+        private void OnEndGame()
+        {
+            endButton.SetActive(true);
+        }
 
-    private void OnNewGame()
-    {
-        gameObject.SetActive(true);
-        ScoreText.text = "0";
-    }
+        private void OnScoreAdded(int delta)
+        {
+            scoreText.text = gameProxy.Scores.ToString();
+        }
 
-    private void TimerEndEvent()
-    {
-        GameProxy.EndGame();
-    }
+        private void OnNewGame()
+        {
+            gameObject.SetActive(true);
+            scoreText.text = "0";
+        }
 
-    private void TimerTickEvent(float t)
-    {
-        TimerText.text = t.ToString(CultureInfo.InvariantCulture);
+        private void TimerEndEvent()
+        {
+            gameProxy.EndGame();
+        }
+
+        private void TimerTickEvent(float t)
+        {
+            timerText.text = t.ToString(CultureInfo.InvariantCulture);
+        }
     }
 }

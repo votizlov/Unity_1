@@ -1,62 +1,64 @@
-﻿using System;
-using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
 using Core;
-using UnityEngine.Serialization;
+using UnityEngine;
 using Random = UnityEngine.Random;
 
-[AddComponentMenu("Playground/Gameplay/Object Creator Area")]
-[RequireComponent(typeof(BoxCollider2D))]
-public class ObjectCreatorArea : MonoBehaviour
+namespace Objects
 {
-    [Header("Object creation")]
-
-    // The object to spawn
-    // WARNING: take if from the Project panel, NOT the Scene/Hierarchy!
-    public GameObject prefabToSpawn;
-
-    [Header("Other options")]
-
-    // Configure the spawning pattern
-    public float spawnInterval = 1;
-
-    public BoxCollider2D _spawnArea;
-    public GameProxy gameProxy;
-    private bool isActive = true;
-
-    void Start()
+    [AddComponentMenu("Playground/Gameplay/Object Creator Area")]
+    [RequireComponent(typeof(BoxCollider2D))]
+    public class ObjectCreatorArea : MonoBehaviour
     {
-        StartCoroutine(SpawnObject());
-    }
+        [Header("Object creation")]
 
-    private void Awake()
-    {
-        gameProxy.TimerEndEvent += toggleSpawn;
-    }
+        // The object to spawn
+        // WARNING: take if from the Project panel, NOT the Scene/Hierarchy!
+        public GameObject prefabToSpawn;
 
-    // This will spawn an object, and then wait some time, then spawn another...
-    IEnumerator SpawnObject()
-    {
-        while (isActive)
+        [Header("Other options")]
+
+        // Configure the spawning pattern
+        public float spawnInterval = 1;
+
+        public BoxCollider2D spawnArea;
+        public GameProxy gameProxy;
+        private bool _isActive = true;
+
+        void Start()
         {
-            // Create some random numbers
-            var size = _spawnArea.size;
-            float randomX = Random.Range(-size.x, size.x) * .5f;
-            var size1 = _spawnArea.size;
-            float randomY = Random.Range(-size1.y, size1.y) * .5f;
-
-            // Generate the new object
-            GameObject newObject = Instantiate<GameObject>(prefabToSpawn, new Vector3(2, 2, 2), Quaternion.identity);
-            var position = this.transform.position;
-            newObject.transform.position = new Vector2(randomX + position.x + 1f, randomY + position.y);
-
-            // Wait for some time before spawning another object
-            yield return new WaitForSeconds(spawnInterval);
+            StartCoroutine(SpawnObject());
         }
-    }
 
-    private void toggleSpawn()
-    {
-        isActive = !isActive;
+        private void Awake()
+        {
+            gameProxy.TimerEndEvent += ToggleSpawn;
+        }
+
+        // This will spawn an object, and then wait some time, then spawn another...
+        IEnumerator SpawnObject()
+        {
+            while (_isActive)
+            {
+                // Create some random numbers
+                var size = spawnArea.size;
+                float randomX = Random.Range(-size.x, size.x) * .5f;
+                var size1 = spawnArea.size;
+                float randomY = Random.Range(-size1.y, size1.y) * .5f;
+
+                // Generate the new object
+                GameObject newObject =
+                    Instantiate<GameObject>(prefabToSpawn, new Vector3(2, 2, 2), Quaternion.identity);
+                var position = this.transform.position;
+                newObject.transform.position = new Vector2(randomX + position.x + 1f, randomY + position.y);
+
+                // Wait for some time before spawning another object
+                yield return new WaitForSeconds(spawnInterval);
+            }
+        }
+
+        private void ToggleSpawn()
+        {
+            _isActive = !_isActive;
+        }
     }
 }

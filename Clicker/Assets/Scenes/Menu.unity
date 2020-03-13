@@ -306,10 +306,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 619167852}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cab6f96f50735c5498fe071a7c558fbf, type: 3}
+  m_Script: {fileID: 11500000, guid: 28f4ef591e61b44fbbe942b6a1fff102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highscore: {fileID: 1854078535}
+  gameProxy: {fileID: 11400000, guid: 0278d0f6229f59a43870cea526061f62, type: 2}
+  highscore: {fileID: 1854078537}
 --- !u!1 &904491232
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,7 +857,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 619167857}
-        m_MethodName: Play
+        m_MethodName: OnNewGameClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

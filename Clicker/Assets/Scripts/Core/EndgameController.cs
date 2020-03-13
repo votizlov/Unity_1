@@ -1,29 +1,23 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Core;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class EndgameController : MonoBehaviour
+namespace Core
 {
-    public GameProxy GameProxy;
-    public Text ScoreText;
-
-    private void Awake()
+    public class EndgameController : MonoBehaviour
     {
-        GameProxy.EndGameEvent += OnEndGame;
-        gameObject.SetActive(false);
-    }
+        public GameProxy gameProxy;
+        public Text scoreText;
 
-    private void OnEndGame()
-    {
-        gameObject.SetActive(true);
-        ScoreText.text = GameProxy.Scores.ToString();
-    }
+        private void Awake()
+        {
+            gameProxy.EndGameEvent += OnEndGame;
+            gameObject.SetActive(false);
+        }
 
-    public void OnReplayClick()
-    {
-        gameObject.SetActive(false);
-        GameProxy.NewGame();
+        private void OnEndGame()
+        {
+            gameObject.SetActive(true);
+            scoreText.text = gameProxy.Scores.ToString();
+        }
     }
 }

@@ -1,25 +1,22 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Globalization;
-using Core;
-using TMPro;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Timer : MonoBehaviour
+namespace Core
 {
-    public GameProxy GameProxy;
-    public float timeLeft = 100;
-
-    void Update()
+    public class Timer : MonoBehaviour
     {
-        timeLeft -= Time.deltaTime;
-        if (timeLeft <= 0)
+        public GameProxy gameProxy;
+        public float timeLeft = 100;
+
+        void Update()
         {
-            GameProxy.OnTimerEnd();
-            Destroy(gameObject);
+            timeLeft -= Time.deltaTime;
+            if (timeLeft <= 0)
+            {
+                gameProxy.OnTimerEnd();
+                Destroy(gameObject);
+            }
+            else
+                gameProxy.OnTimerTick(timeLeft);
         }
-        else
-            GameProxy.OnTimerTick(timeLeft);
     }
 }

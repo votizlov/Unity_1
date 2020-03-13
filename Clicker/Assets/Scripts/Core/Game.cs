@@ -1,46 +1,44 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Core;
-using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
+﻿using UnityEngine;
 
-public class Game : MonoBehaviour
+namespace Core
 {
-    public GameProxy GameProxy;
-    public Timer Timer;
-    public GameObject[] GameObjects;
-
-    private void OnEnable()
+    public class Game : MonoBehaviour
     {
-        GameProxy.NewGameEvent += OnNewGame;
-        GameProxy.EndGameEvent += OnEndGame;
-    }
+        public GameProxy gameProxy;
+        public GameObject[] GameObjects;
 
-    private void OnDisable()
-    {
-        GameProxy.NewGameEvent -= OnNewGame;
-        GameProxy.EndGameEvent -= OnEndGame;
-    }
-
-    private void OnNewGame()
-    {
-        // clear all
-        GameProxy.ClearState();
-
-        // enable physics
-        Physics2D.autoSimulation = true;
-
-        foreach (var o in GameObjects)
+        private void OnEnable()
         {
-            o.SetActive(true);
+            gameProxy.NewGameEvent += OnNewGame;
+            gameProxy.EndGameEvent += OnEndGame;
         }
-    }
 
-    private void OnEndGame()
-    {
-        foreach (var o in GameObjects)
+        private void OnDisable()
         {
-            o.SetActive(false);
+            gameProxy.NewGameEvent -= OnNewGame;
+            gameProxy.EndGameEvent -= OnEndGame;
+        }
+
+        private void OnNewGame()
+        {
+            // clear all
+            gameProxy.ClearState();
+
+            // enable physics
+            Physics2D.autoSimulation = true;
+
+            foreach (var o in GameObjects)
+            {
+                o.SetActive(true);
+            }
+        }
+
+        private void OnEndGame()
+        {
+            foreach (var o in GameObjects)
+            {
+                o.SetActive(false);
+            }
         }
     }
 }

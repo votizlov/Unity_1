@@ -1,25 +1,24 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using Core;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
-public class MainMenuController : MonoBehaviour
+namespace Core
 {
-    public GameProxy GameProxy;
-    public TMP_Text highscore;
-
-    public void OnNewGameClick()
+    public class MainMenuController : MonoBehaviour
     {
-        GameProxy.NewGame();
-        gameObject.SetActive(false);
-        SceneManager.LoadScene("Game");        
-    }
+        public GameProxy gameProxy;
+        public TMP_Text highscore;
 
-    private void Start()
-    {
-        highscore.text = PlayerPrefs.GetInt("Highscore").ToString();
+        public void OnNewGameClick()
+        {
+            gameProxy.NewGame();
+            SceneManager.LoadScene("Game");
+        }
+
+        private void Start()
+        {
+            highscore.text = PlayerPrefs.GetInt("Highscore").ToString();
+        }
     }
 }

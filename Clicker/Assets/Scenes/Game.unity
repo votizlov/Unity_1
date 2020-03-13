@@ -607,8 +607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 751f580fb30d44baea639ae4ee126acb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameProxy: {fileID: 11400000, guid: 0278d0f6229f59a43870cea526061f62, type: 2}
-  Timer: {fileID: 2125216576}
+  gameProxy: {fileID: 11400000, guid: 0278d0f6229f59a43870cea526061f62, type: 2}
   GameObjects: []
 --- !u!4 &557017746
 Transform:
@@ -893,9 +892,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efa4aa3ffc44043d4b0db40c7296b4d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameProxy: {fileID: 11400000, guid: 0278d0f6229f59a43870cea526061f62, type: 2}
-  ScoreText: {fileID: 1806007756}
-  TimerText: {fileID: 2125216574}
+  gameProxy: {fileID: 11400000, guid: 0278d0f6229f59a43870cea526061f62, type: 2}
+  scoreText: {fileID: 1806007756}
+  timerText: {fileID: 2125216574}
   endButton: {fileID: 460945045}
 --- !u!1 &1082870163
 GameObject:
@@ -1077,7 +1076,7 @@ MonoBehaviour:
   prefabToSpawn: {fileID: 146158568139791364, guid: de12ece77a790404e9dc1b86f0b888f6,
     type: 3}
   spawnInterval: 1
-  _spawnArea: {fileID: 1458276020}
+  spawnArea: {fileID: 1458276020}
   gameProxy: {fileID: 11400000, guid: 0278d0f6229f59a43870cea526061f62, type: 2}
 --- !u!61 &1458276020
 BoxCollider2D:
@@ -1444,5 +1443,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff75ced2a495e174c85ebfa6bf7f0bfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameProxy: {fileID: 11400000, guid: 0278d0f6229f59a43870cea526061f62, type: 2}
+  gameProxy: {fileID: 11400000, guid: 0278d0f6229f59a43870cea526061f62, type: 2}
   timeLeft: 10
