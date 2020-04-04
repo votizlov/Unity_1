@@ -13,6 +13,9 @@ GameObject:
   - component: {fileID: 146158568139791362}
   - component: {fileID: 146158568139791361}
   - component: {fileID: 156605448053179497}
+  - component: {fileID: 1525125483486034474}
+  - component: {fileID: 827693016114079171}
+  - component: {fileID: 1806918577489325955}
   m_Layer: 0
   m_Name: Baloon
   m_TagString: Baloon
@@ -148,3 +151,60 @@ MonoBehaviour:
   gameProxy: {fileID: 11400000, guid: 0278d0f6229f59a43870cea526061f62, type: 2}
   k: 1.001
   kDestroy: 2
+  Explodable: {fileID: 1806918577489325955}
+--- !u!95 &1525125483486034474
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146158568139791364}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2c8a6ba7df5eea842b3123269ce4c90f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &827693016114079171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146158568139791364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6af527fdc19948444b49ade90168f8d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baloon: {fileID: 156605448053179497}
+  ShipAnimator: {fileID: 1525125483486034474}
+  DieEffectPrefab: {fileID: 1253142483436318, guid: 89956e675b749204c8e10395ce2b5fb9,
+    type: 3}
+  BodyTransform: {fileID: 146158568139791484}
+--- !u!114 &1806918577489325955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146158568139791364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75953d6b31f574644be1238b08e89b8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allowRuntimeFragmentation: 1
+  extraPoints: 1
+  subshatterSteps: 0
+  fragmentLayer: Default
+  sortingLayerName: Default
+  orderInLayer: 0
+  shatterType: 0
+  fragments: []

@@ -12,6 +12,7 @@ namespace Core
         public event Action<int> AddScoreEvent;
         public event Action<float> TimerTickEvent;
         public event Action TimerEndEvent;
+        public ExplosionForce ExplosionForce { get; set; }
 
         public int Scores { get; private set; }
 
@@ -35,7 +36,7 @@ namespace Core
         public void AddScore(int value)
         {
             Scores += value;
-            
+
             if (Scores > PlayerPrefs.GetInt("Highscore"))
             {
                 PlayerPrefs.SetInt("Highscore", Scores);
@@ -54,7 +55,6 @@ namespace Core
 
         public void EndGame()
         {
-
             Physics2D.autoSimulation = false;
 
             EndGameEvent?.Invoke();

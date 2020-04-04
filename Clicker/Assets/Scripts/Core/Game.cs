@@ -6,9 +6,11 @@ namespace Core
     {
         public GameProxy gameProxy;
         public GameObject[] GameObjects;
+        public ExplosionForce ExplosionForce;
 
         private void OnEnable()
         {
+            gameProxy.ExplosionForce = ExplosionForce;
             gameProxy.NewGameEvent += OnNewGame;
             gameProxy.EndGameEvent += OnEndGame;
         }
