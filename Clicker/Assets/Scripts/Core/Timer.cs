@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections;
+using UnityEngine;
 
 namespace Core
 {
@@ -6,17 +8,27 @@ namespace Core
     {
         public GameProxy gameProxy;
         public float timeLeft = 100;
+        public float tickInterval = 1;
 
-        void Update()
+        private void Start()
         {
-            timeLeft -= Time.deltaTime;
-            if (timeLeft <= 0)
+            StartCoroutine(SpawnObject());
+        }
+        
+        IEnumerator SpawnObject()
+        {
+            while (true)
             {
-                gameProxy.OnTimerEnd();
-                Destroy(gameObject);
+                timeLeft -= tickInterval;
+                if (timeLeft <= 0)
+                {
+                    gameProxy.OnTimerEnd();
+                    Destroy(gameObject);
+                }
+                else
+                    gameProxy.OnTimerTick(timeLeft);
+                yield return new WaitForSeconds(tickInterval);
             }
-            else
-                gameProxy.OnTimerTick(timeLeft);
         }
     }
 }
