@@ -1,16 +1,19 @@
-﻿using UnityEngine;
+﻿using Objects;
+using UnityEngine;
 
 namespace Core
 {
     public class Game : MonoBehaviour
     {
         public GameProxy gameProxy;
-        public GameObject[] GameObjects;
-        public ExplosionForce ExplosionForce;
+        public GameObject[] gameObjects;
+        public ExplosionForce explosionForce;
+        public CameraShake cameraShake;
 
         private void OnEnable()
         {
-            gameProxy.ExplosionForce = ExplosionForce;
+            gameProxy.ExplosionForce = explosionForce;
+            gameProxy.CameraShake = cameraShake;
             gameProxy.NewGameEvent += OnNewGame;
             gameProxy.EndGameEvent += OnEndGame;
         }
@@ -29,7 +32,7 @@ namespace Core
             // enable physics
             Physics2D.autoSimulation = true;
 
-            foreach (var o in GameObjects)
+            foreach (var o in gameObjects)
             {
                 o.SetActive(true);
             }
@@ -37,7 +40,7 @@ namespace Core
 
         private void OnEndGame()
         {
-            foreach (var o in GameObjects)
+            foreach (var o in gameObjects)
             {
                 o.SetActive(false);
             }

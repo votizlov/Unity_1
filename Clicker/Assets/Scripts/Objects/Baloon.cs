@@ -12,7 +12,8 @@ namespace Objects
         [Header("Scale per frame")] public float k = 1.0001f;
         [Header("Scale k when destroyed")] public float kDestroy = 2;
         public event Action DieEvent;
-        [Header("Explosion stuff")] public Explodable Explodable;
+        public event Action HitEvent;
+        [Header("Explosion stuff")] public Explodable explodable;
 
         private bool _isFreezed = false;
 
@@ -42,18 +43,19 @@ namespace Objects
             if (!_isFreezed)
             {
                 clicksToDestroy--;
+                HitEvent?.Invoke();
                 if (clicksToDestroy <= 0)
                 {
                     gameProxy.AddScore(score);
                     DieEvent?.Invoke();
-                    Explodable.generateFragments();
-                    foreach (var fragment in Explodable.fragments)
+                    explodable.generateFragments();
+                    foreach (var fragment in explodable.fragments)
                     {
                         fragment.AddComponent<ObjectCleaner>();
                     }
-
+                    gameProxy.ShakeCam();
                     gameProxy.ExplosionForce.doExplosion(transform.position);
-                    Explodable.explode();
+                    explodable.explode();
                 }
             }
         }

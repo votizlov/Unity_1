@@ -151,7 +151,7 @@ MonoBehaviour:
   gameProxy: {fileID: 11400000, guid: 0278d0f6229f59a43870cea526061f62, type: 2}
   k: 1.001
   kDestroy: 2
-  Explodable: {fileID: 1806918577489325955}
+  explodable: {fileID: 1806918577489325955}
 --- !u!95 &1525125483486034474
 Animator:
   serializedVersion: 3
@@ -184,10 +184,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baloon: {fileID: 156605448053179497}
-  ShipAnimator: {fileID: 1525125483486034474}
-  DieEffectPrefab: {fileID: 1253142483436318, guid: 89956e675b749204c8e10395ce2b5fb9,
+  dieEffectPrefab: {fileID: 1253142483436318, guid: 89956e675b749204c8e10395ce2b5fb9,
     type: 3}
-  BodyTransform: {fileID: 146158568139791484}
+  hitEffectPrefab: {fileID: 6765813672791473665, guid: 097296becf794ef4eb51d68cbb651949,
+    type: 3}
+  bodyTransform: {fileID: 146158568139791484}
 --- !u!114 &1806918577489325955
 MonoBehaviour:
   m_ObjectHideFlags: 0

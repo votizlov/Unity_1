@@ -1,27 +1,29 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Spawner : MonoBehaviour
+namespace Objects
 {
-	public float Delay = 0f;
-	public float SpawnTime = 2f;
-	public GameObject Prefab;
-
-	private float _timer;
-
-	private void OnEnable()
+	public class Spawner : MonoBehaviour
 	{
-		_timer = Delay;
-	}
+		public float delay = 0f;
+		public float spawnTime = 2f;
+		public GameObject prefab;
 
-	private void Update()
-	{
-		_timer -= Time.deltaTime;
-		if(_timer <= 0f)
+		private float _timer;
+
+		private void OnEnable()
 		{
-			GameObject.Instantiate(Prefab, transform.position, transform.rotation);
-			_timer = SpawnTime;
+			_timer = delay;
+		}
+
+		private void Update()
+		{
+			_timer -= Time.deltaTime;
+			if(_timer <= 0f)
+			{
+				var transform1 = transform;
+				GameObject.Instantiate(prefab, transform1.position, transform1.rotation);
+				_timer = spawnTime;
+			}
 		}
 	}
 }

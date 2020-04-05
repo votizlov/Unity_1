@@ -13,7 +13,7 @@ namespace Objects
 
         // The object to spawn
         // WARNING: take if from the Project panel, NOT the Scene/Hierarchy!
-        public GameObject prefabToSpawn;
+        public GameObject[] prefabsToSpawn;
 
         [Header("Other options")]
 
@@ -47,13 +47,18 @@ namespace Objects
 
                 // Generate the new object
                 GameObject newObject =
-                    Instantiate<GameObject>(prefabToSpawn, new Vector3(2, 2, 2), Quaternion.identity);
+                    Instantiate<GameObject>(ChoosePrefab(), new Vector3(2, 2, 2), Quaternion.identity);
                 var position = this.transform.position;
                 newObject.transform.position = new Vector2(randomX + position.x + 1f, randomY + position.y);
 
                 // Wait for some time before spawning another object
                 yield return new WaitForSeconds(spawnInterval);
             }
+        }
+
+        private GameObject ChoosePrefab()
+        {
+            return prefabsToSpawn[Random.Range(0, prefabsToSpawn.Length)];
         }
 
         private void ToggleSpawn()

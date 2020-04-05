@@ -9,32 +9,38 @@ namespace Animations
 		public const string DeadAnimationInteger = "DeadAnimation";
 
 		public Baloon baloon;
-		public Animator ShipAnimator;
-		public GameObject DieEffectPrefab;
-		public Transform BodyTransform;
+		public GameObject dieEffectPrefab;
+		public GameObject hitEffectPrefab;
+		public Transform bodyTransform;
 
 		private void OnEnable()
 		{
 			baloon.DieEvent += DeadAnimationPlay;
+			baloon.HitEvent += HitAnimationPlay;
 		}
 
 		private void OnDisable()
 		{
 			baloon.DieEvent -= DeadAnimationPlay;
+			baloon.HitEvent -= HitAnimationPlay;
 		}
 
 		private void DeadAnimationPlay()
 		{
-			if (DieEffectPrefab != null)
-				Instantiate(DieEffectPrefab, BodyTransform.position, BodyTransform.rotation);
-			var deadAnimationNumber = Random.Range(1, 4);
-			ShipAnimator.SetInteger(DeadAnimationInteger, deadAnimationNumber);
+			if (dieEffectPrefab != null)
+				Instantiate(dieEffectPrefab, bodyTransform.position, bodyTransform.rotation);
+		}
+
+		private void HitAnimationPlay()
+		{
+			if (hitEffectPrefab != null)
+				Instantiate(hitEffectPrefab, bodyTransform.position, Quaternion.identity);
 		}
 
 		public void OnDestroyObjectAfterAnimation()
 		{
-			if (DieEffectPrefab != null)
-				Instantiate(DieEffectPrefab, BodyTransform.position, BodyTransform.rotation);
+			if (dieEffectPrefab != null)
+				Instantiate(dieEffectPrefab, bodyTransform.position, bodyTransform.rotation);
 
 			Destroy(gameObject);
 		}

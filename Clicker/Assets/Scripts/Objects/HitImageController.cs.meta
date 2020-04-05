@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: 751f580fb30d44baea639ae4ee126acb
+guid: c78e2e5f63f46454ebc27c8ebd605752
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - gameProxy: {fileID: 11400000, guid: 0278d0f6229f59a43870cea526061f62, type: 2}
-  - explosionForce: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

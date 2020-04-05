@@ -89,13 +89,14 @@
      <Compile Include="Assets\Scripts\Core\GameProxy.cs" />
      <Compile Include="Assets\Scripts\Core\GameplayHUD.cs" />
      <Compile Include="Assets\Scripts\Core\MainMenuController.cs" />
+     <Compile Include="Assets\Scripts\Core\ScoreMultiplerController.cs" />
      <Compile Include="Assets\Scripts\Core\Timer.cs" />
      <Compile Include="Assets\Scripts\Objects\Baloon.cs" />
-     <Compile Include="Assets\Scripts\Objects\Effect.cs" />
+     <Compile Include="Assets\Scripts\Objects\CameraShake.cs" />
      <Compile Include="Assets\Scripts\Objects\ExplosionForce.cs" />
+     <Compile Include="Assets\Scripts\Objects\HitImageController.cs" />
      <Compile Include="Assets\Scripts\Objects\ObjectCleaner.cs" />
      <Compile Include="Assets\Scripts\Objects\ObjectCreatorArea.cs" />
-     <Compile Include="Assets\Scripts\Objects\Particle.cs" />
      <Compile Include="Assets\Scripts\Objects\Spawner.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />

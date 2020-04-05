@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Objects;
 using UnityEngine;
 
 namespace Core
@@ -15,6 +16,8 @@ namespace Core
         public ExplosionForce ExplosionForce { get; set; }
 
         public int Scores { get; private set; }
+
+        public CameraShake CameraShake { get; set; }
 
         private List<GameObject> _objects = new List<GameObject>();
 
@@ -44,6 +47,11 @@ namespace Core
             }
 
             AddScoreEvent?.Invoke(value);
+        }
+
+        public void ShakeCam()
+        {
+            CameraShake.Shake();
         }
 
         public void NewGame()
