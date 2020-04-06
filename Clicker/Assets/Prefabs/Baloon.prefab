@@ -148,6 +148,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 10
   clicksToDestroy: 1
+  timeAddedOnDestroy: 1
+  timeAddedPrefab: {fileID: 183028402441745841, guid: 86ae1f942a2bca1428178dcbd8c81491,
+    type: 3}
   gameProxy: {fileID: 11400000, guid: 0278d0f6229f59a43870cea526061f62, type: 2}
   k: 1.001
   kDestroy: 2

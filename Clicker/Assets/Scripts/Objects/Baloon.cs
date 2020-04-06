@@ -8,6 +8,7 @@ namespace Objects
     {
         public int score = 10;
         public int clicksToDestroy = 1;
+        public int timeAddedOnDestroy = 1;
         public GameProxy gameProxy;
         [Header("Scale per frame")] public float k = 1.0001f;
         [Header("Scale k when destroyed")] public float kDestroy = 2;
@@ -53,7 +54,7 @@ namespace Objects
                     {
                         fragment.AddComponent<ObjectCleaner>();
                     }
-                    gameProxy.ShakeCam();
+                    gameProxy.AddTime(timeAddedOnDestroy);
                     gameProxy.ExplosionForce.doExplosion(transform.position);
                     explodable.explode();
                 }

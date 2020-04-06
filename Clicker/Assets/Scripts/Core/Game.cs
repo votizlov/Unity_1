@@ -9,11 +9,13 @@ namespace Core
         public GameObject[] gameObjects;
         public ExplosionForce explosionForce;
         public CameraShake cameraShake;
+        public Timer timer;
 
         private void OnEnable()
         {
             gameProxy.ExplosionForce = explosionForce;
             gameProxy.CameraShake = cameraShake;
+            gameProxy.Timer = timer;
             gameProxy.NewGameEvent += OnNewGame;
             gameProxy.EndGameEvent += OnEndGame;
         }

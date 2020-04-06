@@ -13,11 +13,14 @@ namespace Core
         public event Action<int> AddScoreEvent;
         public event Action<float> TimerTickEvent;
         public event Action TimerEndEvent;
+        public event Action TimerAddEvent;
         public ExplosionForce ExplosionForce { get; set; }
 
         public int Scores { get; private set; }
 
         public CameraShake CameraShake { get; set; }
+
+        public Timer Timer { get; set; }
 
         private List<GameObject> _objects = new List<GameObject>();
 
@@ -47,6 +50,12 @@ namespace Core
             }
 
             AddScoreEvent?.Invoke(value);
+        }
+
+        public void AddTime(int val)
+        {
+            Timer.AddTime(val);
+            TimerAddEvent?.Invoke();
         }
 
         public void ShakeCam()

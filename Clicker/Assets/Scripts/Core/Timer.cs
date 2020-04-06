@@ -14,8 +14,14 @@ namespace Core
         {
             StartCoroutine(SpawnObject());
         }
-        
-        IEnumerator SpawnObject()
+
+        public void AddTime(int val)
+        {
+            timeLeft += val;
+            gameProxy.OnTimerTick(timeLeft);
+        }
+
+        private IEnumerator SpawnObject()
         {
             while (true)
             {
